@@ -4,21 +4,13 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
     <meta name="author" content="">
-    <title>App Layers</title>
 
 	<!-- Bootstrap CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-     <!-- CSS Custom -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
     <!-- favicon Icon -->
     <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">-->
     <!-- CSS Plugins -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.min.css">
     <!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -39,7 +31,7 @@
         	<div class="header_top">
         		<div class="col-md-2">
             		<div class="logo_img">
-						<a href="#"><img src="images/logo.png" alt="logoimage"></a>
+						<a href="#"><?php the_custom_logo(); ?></a>
 					</div>
 				</div>
 
@@ -57,7 +49,7 @@
 
 							  <div class="collapse navbar-collapse" id="navbar">
 
-									<ul class="nav navbar-nav">
+									<!--<ul class="nav navbar-nav">
 									  <li><a href="#">Home</a></li>
 									  <li><a href="#"> Features </a></li>
 									  <li><a href="#">Services </a></li>
@@ -68,6 +60,7 @@
 									  <li><a href="#"> Blog  </a></li>
 									  <li><a href="#">  Contact  </a></li>
 									</ul>
+								-->
                           		</div>
 
 
