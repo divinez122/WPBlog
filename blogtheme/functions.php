@@ -196,3 +196,86 @@ function blogtheme_pagination( $args = array() ) {
     if ( isset($echo) )
         echo $args['before_output'] . $echo . $args['after_output'];
 }
+
+function blogtheme_customize_register($wp_customize){
+	$wp_customize -> add_setting('header_social', array(
+		'default' => __('Share Your Favorite Mobile Apps With Your Friends', 'blogtheme'),
+		'transport' => 'refresh',
+	));
+
+	$wp_customize -> add_setting('facebook_social', array(
+		'default' => __('Url facebook', 'blogtheme'),
+		'transport' => 'refresh',
+	));
+	$wp_customize -> add_setting('twitter_social', array(
+		'default' => __('Url twitter', 'blogtheme'),
+		'transport' => 'refresh',
+	));
+	$wp_customize -> add_setting('linkedin_social', array(
+		'default' => __('Url linkedin', 'blogtheme'),
+		'transport' => 'refresh',
+	));
+
+	$wp_customize -> add_setting('footer_copy', array(
+		'default' => __('Copyright text', 'blogtheme'),
+		'transport' => 'refresh',
+	));
+
+	$wp_customize -> add_section('social_section', array(
+		'title' => __('Social settings', 'blogtheme'),
+		'priority' => 30,
+	));
+
+	$wp_customize -> add_section('footer_setting', array(
+		'title' => __('Footer settings', 'blogtheme'),
+		'priority' => 31,
+	));
+
+
+
+	$wp_customize -> add_control(
+		'header_social',
+	 array(
+		'label' => __('Social header in footer', 'blogtheme'),
+		'section' => 'social_section',
+		'settings' => 'header_social',
+		'type' => 'text',
+	));
+
+	$wp_customize -> add_control(
+		'facebook_social',
+	 array(
+		'label' => __('Facebook profile url', 'blogtheme'),
+		'section' => 'social_section',
+		'settings' => 'facebook_social',
+		'type' => 'text',
+	));
+
+	$wp_customize -> add_control(
+		'twitter_social',
+	 array(
+		'label' => __('Twitter profile url', 'blogtheme'),
+		'section' => 'social_section',
+		'settings' => 'twitter_social',
+		'type' => 'text',
+	));
+
+	$wp_customize -> add_control(
+		'linkedin_social',
+	 array(
+		'label' => __('Linkedin profile url', 'blogtheme'),
+		'section' => 'social_section',
+		'settings' => 'linkedin_social',
+		'type' => 'text',
+	));
+
+	$wp_customize -> add_control(
+		'footer_copy',
+	 array(
+		'label' => __('Footer settings', 'blogtheme'),
+		'section' => 'footer_setting',
+		'settings' => 'footer_copy',
+		'type' => 'textarea',
+	));
+}
+add_action('customize_register', 'blogtheme_customize_register');
